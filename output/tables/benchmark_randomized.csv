@@ -1,0 +1,7 @@
+"outcome","estimand","estimate","lower","upper","interpretation"
+"conversion","ITT (randomized)",0.00115187305213163,0.00108376617238089,0.0012185181457769,"effect of ad eligibility on all users"
+"conversion","CACE (IV on exposure)",0.0319638638858256,0.030099844721721,0.0338278830499302,"effect of actually seeing an ad, among compliers"
+"visit","ITT (randomized)",0.0103424031291983,0.0100549235739791,0.0106284763739115,"effect of ad eligibility on all users"
+"visit","CACE (IV on exposure)",0.286996180058437,0.279112185817379,0.294880174299496,"effect of actually seeing an ad, among compliers"
+"conversion","NAIVE exposed vs unexposed",0.0525898105410816,0.0519178223487144,0.053269791196685,"not causal: the ad server chose who was exposed"
+"visit","NAIVE exposed vs unexposed",0.37967660107207,0.378198005121203,0.381156704001856,"not causal: the ad server chose who was exposed"

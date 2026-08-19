@@ -1,0 +1,7 @@
+"arm","alpha","naive_relative_bias","best_feasible_spec","best_relative_bias","ci_covers_benchmark"
+"hidden",0.25,3.5789942091008,"IPTW (stabilized) [ps=linear]",0.343803533211301,FALSE
+"hidden",0.5,5.10781551172435,"IPTW (stabilized) [ps=flexible]",0.250564854778746,TRUE
+"hidden",1,5.880072330323,"AIPW (cross-fit) [ps=flexible, om=parsimonious]",0.225609289528776,FALSE
+"observed",0.25,3.66789618826321,"AIPW (cross-fit) [ps=linear, om=rich]",0.147156282067719,TRUE
+"observed",0.5,4.80729628095623,"g-computation [om=parsimonious]",0.37365181901672,FALSE
+"observed",1,5.20271749959285,"g-computation [om=parsimonious]",-1.25464749983094,FALSE

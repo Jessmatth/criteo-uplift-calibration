@@ -1,0 +1,4 @@
+"reported_as","per_user_effect_pp","applies_to","is_causal"
+"last-touch / exposed vs unexposed",5.25898105410816,"the 3.6% of treated users who saw an ad","no"
+"effect of seeing an ad (CACE, IV)",3.19638638858256,"the users whose exposure the campaign changed","yes"
+"effect of running the campaign (ITT)",0.115187305213163,"every user the campaign could reach","yes"
