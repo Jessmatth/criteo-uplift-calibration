@@ -229,10 +229,37 @@ sample size 0.
 
 **The same machinery is usable for visits and unusable for conversions.** At a
 0.29% event rate, 2M rows leave roughly 6,000 conversions carrying the whole
-estimate, and at α=0.5 **63%** of conversion specifications fail on interval
-width alone — too vague to act on even when the point estimate is close. That is
-a precision problem with a different fix (more data, not better adjustment), and
-separating it from bias is why both outcomes are analysed.
+estimate. At α=0.5, **19 of 30** conversion specifications fail the
+interval-width check alone — too vague to act on even when the point estimate is
+close. The 0% in the table above is a stricter bar: share passing *every* check,
+not just this one. That is a precision problem with a different fix (more data,
+not better adjustment), and separating it from bias is why both outcomes are
+analysed.
+
+### Matching fails on precision, not on bias
+
+All 48 matching specifications fail, across both outcomes and all four
+confounding levels:
+
+| | |
+|---|---:|
+| specifications run | 48 |
+| passing all guardrails | **0** |
+| best relative bias | **1%** |
+| median CI width ratio | 4x |
+| worst CI width ratio | **617x** |
+
+The point estimates are often excellent — the best lands within 1% of the
+experimental benchmark — but the median confidence interval is 4x the width of
+the benchmark's. Discarding unmatched controls costs the sample that buys
+precision.
+
+This is the clearest case in the repo for scoring intervals rather than point
+estimates. A method that is 1% off and unusable would pass any accuracy-only
+review. Matching was run at its defaults and not tuned, and the oracle-score
+specifications in particular carry width ratios above 250x, which suggests the
+caliper binds hard there; read this as evidence about out-of-the-box matching,
+not about the method in principle.
 
 ### The negative control found something real
 
