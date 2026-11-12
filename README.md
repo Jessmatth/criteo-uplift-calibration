@@ -149,10 +149,13 @@ estimators. **0% means the estimator recovered the experiment.**
 Three things are worth reading off these tables.
 
 **Adjustment helps enormously and is still not enough.** The naive readout is
-360–590% too high. The best realistic specifications pull that to 15–57%. That
-is a large reduction and an unusable answer: a 50% overstatement of incremental
-conversions is the difference between a campaign that clears its hurdle rate and
-one that does not.
+360–590% too high. Under light targeting (α=0.25) the best realistic
+specifications pull that to 15–57%. That is a large reduction and an unusable
+answer: a 50% overstatement of incremental conversions is the difference between
+a campaign that clears its hurdle rate and one that does not. The range widens
+with targeting strength — at α=0.5 the best realistic specification in each arm
+is 25–37% off, and at α=1 the observed arm degrades to 125% while the hidden arm
+holds at 23%. Read the 15–57% as the best case, not the typical one.
 
 **"Share of the gap closed" flatters.** Closing 90% of a 500% gap leaves a 50%
 overstatement. This repo leads with relative bias for that reason; the
@@ -207,8 +210,12 @@ model and wrong about the answer is a normal outcome, not a pathology.
 ### Where estimation stops being possible
 
 At α=1 the true propensity score reaches 1.000 and **11.6%** of units fall
-outside the truncation bounds — whole strata retain almost no controls. Every
-method lands 125–265% off, including the one using the true score.
+outside the truncation bounds — whole strata retain almost no controls. In the
+observed arm every method lands 125–265% off, including the one using the true
+score. The hidden arm is not uniformly worse — its best realistic specification
+sits at 23% — but no specification in either arm passes the guardrails at this
+level, so a number that happens to land close is not one you could have
+identified in advance.
 
 **No estimator recovers an effect the data cannot identify.** The positivity
 guardrail is what says so before the number reaches a slide, and it is the
